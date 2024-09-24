@@ -1,0 +1,76 @@
+.header {
+    background-color: #00aaff59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+    box-shadow: 0px 21px 28px 0px #00aaff59;
+}
+
+#content {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title_book {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+#book_img {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.price_like {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    padding: 30px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+}
+.like img {
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+}
+
+#book_info{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/*Button Transparent machen */
+
+/*.test{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+}*/
