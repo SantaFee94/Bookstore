@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 32px;
 }
 
 #title_book {
@@ -42,29 +43,34 @@
     display: flex;
     align-items: center;
 }
-.like img {
+
+.like_red_heart {
     width: 40px;
     height: 40px;
     padding: 30px;
+    content: url(/assets/img/icon/red_heart.png);
 }
 
-#book_info{
+.none_like_white_heart {
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+    content: url(/assets/img/icon/white_heart.png);
+}
+
+#book_info {
     width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.comment_section{
+.comment_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-
-
-
 
 /*Button Transparent machen */
 
