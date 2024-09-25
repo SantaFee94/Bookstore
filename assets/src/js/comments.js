@@ -1,34 +1,28 @@
-let user = [];
-let userComments = [];
+let userData = {
+    user: [],
+    userComments: [],
+    newComment: [],
+};
 
-function saveUserInput(indexBook) {
-    saveUserName(indexBook);
-    saveUserCommentInput(indexBook);
-}
-
-function saveUserName(indexBook) {
+function saveUserInputData(indexBook) {
     let userNameInputRef = document.getElementById(`inputUserName${indexBook}`);
-    let userName = userNameInputRef.value;
-
-    if (userName == "") {
-        alert("Bitte gib deinen Namen ein");
-        return;
-    }
-    user.push(userName);
-    saveToLocalStorage()
-    userNameInputRef.value = "";
-}
-
-function saveUserCommentInput(indexBook) {
     let userCommentInputRef = document.getElementById(`inputUserComment${indexBook}`);
+    let userName = userNameInputRef.value;
     let userComment = userCommentInputRef.value;
 
-    if (userComment == "") {
-        alert("Bitte gib einen Kommentar ein");
+    if (userName == "") {
+        alert("Bitte gib  einen Namen ein");
         return;
     }
+    if (userComment == "") {
+        alert("Bitte gib ein Komentar ein");
+    }
 
-    userComments.push(userComment);
-    saveToLocalStorage()
+    userData.user.push(userName);
+    userData.userComments.push(userComment);
+    saveToLocalStorage();
+    userNameInputRef.value = "";
     userCommentInputRef.value = "";
+
+    renderUserComment(indexBook);
 }
