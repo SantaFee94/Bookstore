@@ -10,5 +10,6 @@ function addOrRemoveLike(indexBook) {
     document.getElementById(`liked${indexBook}`).classList.toggle("like_red_heart");
     document.getElementById(`liked${indexBook}`).classList.toggle("none_like_white_heart");
 
+    saveToLocalStorage()
     renderBooks();
 }

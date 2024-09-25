@@ -18,11 +18,11 @@ function saveUserInputData(indexBook) {
         alert("Bitte gib ein Komentar ein");
     }
 
-    userData.user.push(userName);
-    userData.userComments.push(userComment);
+    books[indexBook].comments.push({ comment: userComment, name: userName });
+
     saveToLocalStorage();
     userNameInputRef.value = "";
     userCommentInputRef.value = "";
 
-    renderUserComment(indexBook);
+    renderBooks();
 }
