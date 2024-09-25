@@ -16,11 +16,11 @@ function getBookHtmlTemplate(indexBook) {
                 <h3>Kommentare</h3>
                 <div id="commentsForBook${indexBook}" class="comment_section"></div>
 
-                 <div id="addComments" class="add-comment">
+                 
                     <div class="iput_field">
-                        <input id="inputUserName" type="text" placeholder="Leser Name" />
-                        <input id="inputUserComment" type="text" placeholder="Kommentar" />
-                        <button class="save_button">Speicher</button>
+                        <input id="inputUserName${indexBook}" type="text" placeholder="Leser Name" />
+                        <input id="inputUserComment${indexBook}" type="text" placeholder="Kommentar" />
+                        <button onclick="saveUserInput(${indexBook})" class="save_button">Speichern</button>
                     </div>
 
                     

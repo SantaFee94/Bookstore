@@ -1,30 +1,34 @@
 let user = [];
-let comments = [];
+let userComments = [];
 
-function saveUserName() {
-    let userNameInputRef = document.getElementById("inputUserName");
+function saveUserInput(indexBook) {
+    saveUserName(indexBook);
+    saveUserCommentInput(indexBook);
+}
+
+function saveUserName(indexBook) {
+    let userNameInputRef = document.getElementById(`inputUserName${indexBook}`);
     let userName = userNameInputRef.value;
 
-    if (userName === "") {
+    if (userName == "") {
         alert("Bitte gib deinen Namen ein");
         return;
     }
-
     user.push(userName);
-
+    saveToLocalStorage()
     userNameInputRef.value = "";
 }
 
-function saveUserCommend() {
-    let userCommentInputRef = document.getElementById("inputUserComment");
+function saveUserCommentInput(indexBook) {
+    let userCommentInputRef = document.getElementById(`inputUserComment${indexBook}`);
     let userComment = userCommentInputRef.value;
 
     if (userComment == "") {
-        alert("Bitte gib deinen Kommentar ein");
+        alert("Bitte gib einen Kommentar ein");
         return;
     }
-    comments.push(userComment);
+
+    userComments.push(userComment);
+    saveToLocalStorage()
     userCommentInputRef.value = "";
 }
-
-
