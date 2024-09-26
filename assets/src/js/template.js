@@ -4,7 +4,7 @@ function getBookHtmlTemplate(indexBook) {
     return ` <div id="content">
                 <div id="title_book"><h2>${books[indexBook].name}</h2></div>
 
-                <div id="book_img"><img src="./assets/img/icon/book.png" alt="book" /></div>
+                <div id="book_img" class="book_container"><img src="./assets/img/icon/book.png" alt="book" /></div>
 
                 <div class="price_like">
                     <div class="price">${books[indexBook].price.toFixed(2).replace(".", ",")}€</div>
@@ -13,16 +13,16 @@ function getBookHtmlTemplate(indexBook) {
 
                 <div id="book_info"><span>Author : ${books[indexBook].author} Erscheinungsjahr : ${books[indexBook].publishedYear} Genre : ${books[indexBook].genre}</span></div>
 
-                <h3>Kommentare</h3>
+                <h2>Kommentare</h2>
                 <div id="commentsForBook${indexBook}" class="comment_section"></div>
 
-                 
+                 <div class="input_field_design">
                     <div class="iput_field">
                         <input id="inputUserName${indexBook}" type="text" placeholder="Leser Name" />
                         <input id="inputUserComment${indexBook}" type="text" placeholder="Kommentar" />
                         <button onclick="saveUserInputData(${indexBook})" class="save_button">Speichern</button>
                     </div>
-
+                 </div>
                     
                    
                 </div>
@@ -30,7 +30,7 @@ function getBookHtmlTemplate(indexBook) {
 }
 
 function getCommentToHtml(indexBook, indexComment) {
-    return `<div id="comment" class="user_name">${books[indexBook].comments[indexComment].name}</div>
+    return `<div id="comment" class="user_name"><h3>${books[indexBook].comments[indexComment].name}</h3></div>
                      <div class="comment_field">${books[indexBook].comments[indexComment].comment}</div>`;
 }
 

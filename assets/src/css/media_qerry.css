@@ -1,0 +1,20 @@
+@media(max-width:550px){
+    #content{
+        width: 400px;
+    }
+}
+
+@media(max-width:444px){
+    #content{
+        width: 300px;
+    }
+}
+
+@media(max-width:336px){
+    #content{
+        width: 250px;
+    }
+    h1{
+        text-align: center;
+    }
+}

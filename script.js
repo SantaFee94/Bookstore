@@ -16,6 +16,13 @@ function renderBooks() {
 function renderComments(indexBook) {
     let commentRef = document.getElementById(`commentsForBook${indexBook}`);
 
+    if (books[indexBook].comments.length == 0) {
+        commentRef.innerHTML += `
+          <p>Hier sind noch keine Kommentare, sei der erste.</p>
+          `;
+        return;
+    }
+
     for (let indexComment = 0; indexComment < books[indexBook].comments.length; indexComment++) {
         commentRef.innerHTML += getCommentToHtml(indexBook, indexComment);
     }
